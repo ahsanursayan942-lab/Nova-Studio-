@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>NOVA ATELIER | 2026 Black Label Collection</title>
+    <meta name="description" content="Explore the 2026 Black Label Collection at Nova Atelier. High-end fashion designed for the modern uniform.">
+    <meta name="theme-color" content="#0a0a0a">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&family=DM+Sans:wght@300;400;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="Nova.css">
+<style>
+  /* Desktop: 2x2 Grid */
+.quad-matrix {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px; /* Space between video boxes */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.camp-box {
+    width: 100%;
+    aspect-ratio: 4/5; /* Maintains professional fashion-film dimensions */
+    overflow: hidden;
+}
+
+.camp-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video fills the box without stretching */
+}
+
+/* Mobile: 1 Column Stack */
+@media (max-width: 768px) {
+    .quad-matrix {
+        grid-template-columns: 1fr; /* Stacks videos vertically on mobile */
+        padding: 10px;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- PAGE LOADER -->
+<div id="page-loader">
+    <div class="loader-logo">NOVA<span>ATELIER</span></div>
+    <div class="loader-bar"><div class="loader-fill"></div></div>
+</div>
+
+<!-- TOAST CONTAINER -->
+<div id="toast-container"></div>
+
+<!-- CUSTOM CURSOR -->
+<div id="cursor-ring"></div>
+<div id="cursor-dot"></div>
+<div id="scroll-bar"></div>
+
+<!-- SEARCH OVERLAY -->
+<div id="search-overlay" class="search-overlay">
+    <button class="search-close" id="search-close"><i class="fa-solid fa-xmark"></i></button>
+    <div class="search-inner">
+        <div class="search-input-wrap">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="search-input" placeholder="Search styles, brands..." autocomplete="off">
+        </div>
+        <div class="search-hint">Try: Dresses, Nova Street, Cargo, Silk</div>
+        <div id="search-results" class="search-results"></div>
+    </div>
+</div>
+
+<!-- SIZE SELECTOR MODAL -->
+<div id="size-modal" class="size-modal">
+    <div class="size-modal-inner">
+        <div class="size-modal-head">
+            <div>
+                <p class="size-modal-brand" id="modal-brand"></p>
+                <h3 class="size-modal-name" id="modal-name"></h3>
+            </div>
+            <button class="size-modal-close" id="size-modal-close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <p class="size-label-txt">SELECT SIZE</p>
+        <div class="size-grid" id="size-grid"></div>
+        <button class="size-confirm-btn" id="size-confirm">ADD TO BAG</button>
+    </div>
+</div>
+
+<!-- CART DRAWER -->
+<div class="cart-overlay" id="cart-overlay"></div>
+<div id="cart-drawer" class="cart-drawer">
+    <div class="cart-drawer-head">
+        <h3>YOUR BAG (<span id="cart-count-drawer">0</span>)</h3>
+        <button id="cart-close" class="cart-close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="cart-body" id="cart-items-container"></div>
+    <div class="cart-footer">
+        <div class="shipping-note"><i class="fa-solid fa-truck"></i> Free shipping on orders over $75</div>
+        <div class="total-row">
+            <span>Subtotal</span>
+            <span id="cart-total-val">$0.00</span>
+        </div>
+        <button class="checkout-btn">PROCEED TO CHECKOUT <i class="fa-solid fa-arrow-right"></i></button>
+        <a href="#shop" class="continue-shopping" id="continue-shopping">Continue Shopping</a>
+    </div>
+</div>
+
+<!-- FLOATING CART -->
+<button id="cart-bag" class="floating-cart">
+    <i class="fa-solid fa-bag-shopping"></i>
+    <span class="cart-count">0</span>
+</button>
+
+<!-- MOBILE NAV DRAWER -->
+<div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+<nav class="mobile-nav" id="mobile-nav">
+    <div class="mobile-nav-head">
+        <span class="logo">NOVA<span style="font-weight:300">ATELIER</span></span>
+        <button class="mobile-nav-close" id="mobile-nav-close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <ul class="mobile-nav-links">
+        <li><a href="#shop" data-cat="all">All Items</a></li>
+        <li><a href="#shop" data-cat="Dresses">Dresses</a></li>
+        <li><a href="#shop" data-cat="Tops">Tops</a></li>
+        <li><a href="#shop" data-cat="Bottoms">Bottoms</a></li>
+        <li><a href="#shop" data-cat="Outerwear">Outerwear</a></li>
+        <li><a href="#shop" data-cat="Sets">Sets</a></li>
+    </ul>
+    <div class="mobile-nav-footer">
+        <p>Free shipping on orders over $75</p>
+    </div>
+</nav>
+
+<!-- HEADER -->
+<header id="main-header">
+    <div class="promo-tape">
+        <div class="ticker">
+            NEW DROP: BLACK LABEL 2026 &nbsp;&bull;&nbsp; FREE SHIPPING OVER $75 &nbsp;&bull;&nbsp; USE CODE NOVA20 FOR 20% OFF &nbsp;&bull;&nbsp; NEW DROP: BLACK LABEL 2026 &nbsp;&bull;&nbsp; FREE SHIPPING OVER $75 &nbsp;&bull;&nbsp; USE CODE NOVA20 FOR 20% OFF &nbsp;&bull;&nbsp;
+        </div>
+    </div>
+    <div class="nav-main">
+        <button class="menu-toggle" id="menu-toggle">
+            <span></span><span></span><span></span>
+        </button>
+        <a href="#" class="logo">NOVA<span>ATELIER</span></a>
+        <div class="nav-tools">
+            <button class="search-trigger" id="search-trigger">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- HERO -->
+    <section class="stage">
+        <video autoplay muted loop playsinline><source src="Fashion.mp4" type="video/mp4"></video>
+        <div class="stage-noise"></div>
+        <div class="stage-overlay">
+            <p class="hero-eyebrow">Black Label Collection 2026</p>
+            <h1>The <em>New</em><br>Uniform</h1>
+            <p class="hero-sub">Precision-engineered for those who wear their silence loudly.</p>
+            <div class="hero-actions">
+                <a href="#shop" class="btn-primary">Shop the Drop</a>
+                <a href="#campaign" class="btn-ghost">View Campaign</a>
+            </div>
+        </div>
+        <div class="hero-scroll-hint">
+            <span>SCROLL</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- TRUST BAR -->
+    <div class="trust-bar">
+        <div class="trust-container">
+            <span class="trust-label">As Seen In</span>
+            <div class="trust-logos">
+                <span class="trust-logo">VOGUE</span>
+                <span class="trust-logo">ELLE</span>
+                <span class="trust-logo">BAZAAR</span>
+                <span class="trust-logo">NYLON</span>
+                <span class="trust-logo">GRAZIA</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- CAMPAIGN GRID -->
+    <section class="quad-matrix" id="campaign">
+        <div class="camp-box camp-label" data-label="NEW COLLECTION">
+            <video src="Fashion-1.mp4" autoplay muted loop playsinline></video>
+        </div>
+        <div class="camp-box" data-label="BLACK LABEL">
+            <video src="Fashion-2.mp4" autoplay muted loop playsinline></video>
+        </div>
+        <div class="camp-box" data-label="SS 2026">
+            <video src="Fashion-3.mp4" autoplay muted loop playsinline></video>
+        </div>
+        <div class="camp-box" data-label="ATELIER">
+            <video src="Fashion-4.mp4" autoplay muted loop playsinline></video>
+        </div>
+    </section>
+
+    <!-- STATS STRIP -->
+    <div class="stats-strip">
+        <div class="stat-item"><span class="stat-num" data-target="16">0</span><span class="stat-label">Collections</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat-item"><span class="stat-num" data-target="12400">0</span><span class="stat-label">Orders Shipped</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat-item"><span class="stat-num" data-target="98">0</span><span class="stat-label">% 5-Star Reviews</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat-item"><span class="stat-num" data-target="48">0</span><span class="stat-label">Countries</span></div>
+    </div>
+
+    <!-- SHOP FILTERS -->
+    <section id="shop">
+        <div class="shop-header">
+            <h2 class="shop-title">The Collection</h2>
+            <span class="product-count" id="product-count">— items</span>
+        </div>
+        <div class="filter-bar" id="category-filters">
+            <button class="pill active" data-category="all">All Items</button>
+            <button class="pill" data-category="Dresses">Dresses</button>
+            <button class="pill" data-category="Tops">Tops</button>
+            <button class="pill" data-category="Bottoms">Bottoms</button>
+            <button class="pill" data-category="Outerwear">Outerwear</button>
+            <button class="pill" data-category="Sets">Sets</button>
+        </div>
+    </section>
+
+    <!-- PRODUCT GRID -->
+    <section class="product-matrix" id="product-grid"></section>
+
+    <!-- EDITORIAL BREAK -->
+    <div class="editorial-break">
+        <div class="ed-media">
+            <video autoplay muted loop playsinline><source src="Fashion-5.mp4" type="video/mp4"></video>
+            <div class="ed-media-overlay"></div>
+        </div>
+        <div class="ed-copy">
+            <p class="ed-eyebrow">Nova Manifesto</p>
+            <h2>Dress Like You <em>Mean It</em></h2>
+            <p>Every stitch designed to move with you. Every cut to outlast the season. This is fashion with a purpose.</p>
+            <a href="#shop" class="btn-primary">Shop Now</a>
+        </div>
+    </div>
+
+    <!-- FEATURES STRIP -->
+    <div class="features-strip">
+        <div class="feat"><i class="fa-solid fa-truck-fast"></i><div><strong>Fast Shipping</strong><span>Orders ship in 24h</span></div></div>
+        <div class="feat"><i class="fa-solid fa-rotate-left"></i><div><strong>Free Returns</strong><span>30-day no-hassle policy</span></div></div>
+        <div class="feat"><i class="fa-solid fa-shield-halved"></i><div><strong>Secure Checkout</strong><span>256-bit SSL encryption</span></div></div>
+        <div class="feat"><i class="fa-solid fa-gem"></i><div><strong>Premium Quality</strong><span>Curated luxury fabrics</span></div></div>
+    </div>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter-section">
+        <div class="newsletter-bg"></div>
+        <div class="newsletter-content">
+            <p class="nl-eyebrow">Join the Atelier</p>
+            <h2>First Access.<br>Always.</h2>
+            <p class="nl-sub">Exclusive drops, early access and editorial content — delivered before anyone else sees it.</p>
+            <form class="input-group" id="nl-form" onsubmit="novaApp.handleNewsletter(event)">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit" class="pill active">Subscribe</button>
+            </form>
+            <p class="nl-disclaimer">No spam. Unsubscribe anytime. We hate clutter too.</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span class="logo">NOVA<span>ATELIER</span></span>
+                <p>Crafted for those who move with intention.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Collection</h4>
+                <ul>
+                    <li><a href="#shop">New Arrivals</a></li>
+                    <li><a href="#shop">Dresses</a></li>
+                    <li><a href="#shop">Outerwear</a></li>
+                    <li><a href="#shop">Sets</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Follow Along</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Nova Atelier. All rights reserved.</p>
+        </div>
+    </footer>
+</main>
+
+<script src="Nova.js"></script>
+</body>
+</html>
