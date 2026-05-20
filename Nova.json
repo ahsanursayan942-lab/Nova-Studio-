@@ -1,0 +1,438 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Midnight Satin Slip Dress",
+      "category": "Dresses",
+      "brand": "Atelier Black Label",
+      "price": 29.98,
+      "oldPrice": 55.0,
+      "stockLevel": 3,
+      "rating": 5,
+      "reviewCount": 2400,
+      "img1": "https://images.unsplash.com/photo-1566479179817-c12e4cc7f3b5?w=600&q=80&fit=crop",
+      "img2": "https://images.unsplash.com/photo-1572804013427-4d7ca7268217?w=600&q=80&fit=crop",
+      "badge": "50% OFF",
+      "colors": [
+        "#004d40",
+        "#000000"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "High Rise Sculpt Cargo",
+      "category": "Bottoms",
+      "brand": "Nova Street",
+      "price": 45.0,
+      "oldPrice": null,
+      "stockLevel": 15,
+      "rating": 4,
+      "reviewCount": 850,
+      "img1": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=600&q=80&fit=crop",
+      "img2": "https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=600&q=80&fit=crop",
+      "badge": "NEW",
+      "colors": [
+        "#4b5320",
+        "#000000"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Sequin Party Mini Dress",
+      "category": "Dresses",
+      "brand": "After Hours",
+      "price": 15.0,
+      "oldPrice": 48.0,
+      "stockLevel": 20,
+      "rating": 5,
+      "reviewCount": 4100,
+      "img1": "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=600&q=80&fit=crop",
+      "img2": "https://images.unsplash.com/photo-1566479179817-c12e4cc7f3b5?w=600&q=80&fit=crop",
+      "badge": "SALE",
+      "colors": [
+        "#C0C0C0"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Essential Ribbed Crop",
+      "category": "Tops",
+      "brand": "Nova Basics",
+      "price": 12.99,
+      "oldPrice": null,
+      "stockLevel": 45,
+      "rating": 5,
+      "reviewCount": 512,
+      "img1": "https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=600&q=80&fit=crop",
+      "img2": "https://images.unsplash.com/photo-1554412933-514a83d2f3c8?w=600&q=80&fit=crop",
+      "badge": null,
+      "colors": [
+        "#FFFFFF",
+        "#000000",
+        "#BEBEBE"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Archival Denim Jacket",
+      "category": "Outerwear",
+      "brand": "Atelier",
+      "price": 58.0,
+      "oldPrice": null,
+      "stockLevel": 2,
+      "rating": 5,
+      "reviewCount": 120,
+      "img1": "https://images.unsplash.com/photo-1551537482-f2075a1d41f2?w=600&q=80&fit=crop",
+      "img2": "https://images.unsplash.com/photo-1548126032-079a0fb0099d?w=600&q=80&fit=crop",
+      "badge": "NEW",
+      "colors": [
+        "#5d76a9"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Distressed Flare Jean",
+      "category": "Bottoms",
+      "brand": "Nova Street",
+      "price": 38.0,
+      "oldPrice": null,
+      "stockLevel": 12,
+      "rating": 4,
+      "reviewCount": 940,
+      "img1": "https://images.unsplash.com/photo-1542574621-e088a4464792?w=600&q=80&fit=crop",
+      "img2": "https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?w=600&q=80&fit=crop",
+      "badge": null,
+      "colors": [
+        "#8fa3ad"
+      ],
+      "sizes": [
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "30",
+        "32"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Sculpting Active Set",
+      "category": "Sets",
+      "brand": "Nova Sport",
+      "price": 22.0,
+      "oldPrice": 45.0,
+      "stockLevel": 8,
+      "rating": 5,
+      "reviewCount": 310,
+      "img1": "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&q=80&fit=crop",
+      "img2": "https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=600&q=80&fit=crop",
+      "badge": "HOT",
+      "colors": [
+        "#000000",
+        "#704214"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Faux Leather Wrap Skirt",
+      "category": "Bottoms",
+      "brand": "After Hours",
+      "price": 24.0,
+      "oldPrice": null,
+      "stockLevel": 4,
+      "rating": 4,
+      "reviewCount": 56,
+      "img1": "https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?w=600&q=80&fit=crop",
+      "img2": "https://images.unsplash.com/photo-1577900232427-18219b9166a0?w=600&q=80&fit=crop",
+      "badge": null,
+      "colors": [
+        "#000000"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Floral Chiffon Gown",
+      "category": "Dresses",
+      "brand": "Atelier Black Label",
+      "price": 65.0,
+      "oldPrice": null,
+      "stockLevel": 10,
+      "rating": 5,
+      "reviewCount": 15,
+      "img1": "https://images.unsplash.com/photo-1519657337289-077653f724ed?w=600&q=80&fit=crop",
+      "img2": "https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=600&q=80&fit=crop",
+      "badge": null,
+      "colors": [
+        "#ffb6c1"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Cropped Matte Puffer",
+      "category": "Outerwear",
+      "brand": "Nova Street",
+      "price": 79.0,
+      "oldPrice": 120.0,
+      "stockLevel": 3,
+      "rating": 5,
+      "reviewCount": 88,
+      "img1": "https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=600&q=80&fit=crop",
+      "img2": "https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=600&q=80&fit=crop",
+      "badge": null,
+      "colors": [
+        "#000000",
+        "#FFFFFF"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Wide Leg Ribbed Set",
+      "category": "Sets",
+      "brand": "Nova Luxe",
+      "price": 35.0,
+      "oldPrice": null,
+      "stockLevel": 14,
+      "rating": 4,
+      "reviewCount": 215,
+      "img1": "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600&q=80&fit=crop",
+      "img2": "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=600&q=80&fit=crop",
+      "badge": null,
+      "colors": [
+        "#d2b48c"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Vintage Graphic Tee",
+      "category": "Tops",
+      "brand": "Nova Street",
+      "price": 19.0,
+      "oldPrice": null,
+      "stockLevel": 50,
+      "rating": 5,
+      "reviewCount": 1100,
+      "img1": "https://images.unsplash.com/photo-1503342394128-c104d54dba01?w=600&q=80&fit=crop",
+      "img2": "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=600&q=80&fit=crop",
+      "badge": null,
+      "colors": [
+        "#808080"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Silk Wrap Front Blouse",
+      "category": "Tops",
+      "brand": "Atelier",
+      "price": 44.0,
+      "oldPrice": null,
+      "stockLevel": 7,
+      "rating": 5,
+      "reviewCount": 42,
+      "img1": "https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=600&q=80&fit=crop",
+      "img2": "https://images.unsplash.com/photo-1554412933-514a83d2f3c8?w=600&q=80&fit=crop",
+      "badge": null,
+      "colors": [
+        "#FFFFFF"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Tailored Studio Trousers",
+      "category": "Bottoms",
+      "brand": "Atelier",
+      "price": 55.0,
+      "oldPrice": null,
+      "stockLevel": 6,
+      "rating": 4,
+      "reviewCount": 19,
+      "img1": "https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=600&q=80&fit=crop",
+      "img2": "https://images.unsplash.com/photo-1594938298603-c8148c4b4057?w=600&q=80&fit=crop",
+      "badge": null,
+      "colors": [
+        "#000000"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Gold Link Chain Belt",
+      "category": "Accessories",
+      "brand": "Nova Acc",
+      "price": 15.0,
+      "oldPrice": null,
+      "stockLevel": 25,
+      "rating": 5,
+      "reviewCount": 340,
+      "img1": "https://images.unsplash.com/photo-1611085583191-a3b181a88401?w=600&q=80&fit=crop",
+      "img2": "https://images.unsplash.com/photo-1576053139778-7e32f2ae3cda?w=600&q=80&fit=crop",
+      "badge": null,
+      "colors": [
+        "#FFD700"
+      ],
+      "sizes": [
+        "ONE SIZE"
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Cut-Out Designer Swim",
+      "category": "Swim",
+      "brand": "Nova Luxe",
+      "price": 38.0,
+      "oldPrice": null,
+      "stockLevel": 9,
+      "rating": 5,
+      "reviewCount": 67,
+      "img1": "https://images.unsplash.com/photo-1570976447640-ac859083963f?w=600&q=80&fit=crop",
+      "img2": "https://images.unsplash.com/photo-1512736683576-a5a6a8826f33?w=600&q=80&fit=crop",
+      "badge": null,
+      "colors": [
+        "#000000"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L"
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Linen Oversized Blazer",
+      "category": "Outerwear",
+      "brand": "Atelier Black Label",
+      "price": 89.0,
+      "oldPrice": null,
+      "stockLevel": 6,
+      "rating": 5,
+      "reviewCount": 33,
+      "img1": "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&q=80&fit=crop",
+      "img2": "https://images.unsplash.com/photo-1598808503746-f34c53b9323e?w=600&q=80&fit=crop",
+      "badge": "NEW",
+      "colors": [
+        "#d4c5a9",
+        "#000000"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Asymmetric Cutout Dress",
+      "category": "Dresses",
+      "brand": "After Hours",
+      "price": 52.0,
+      "oldPrice": 78.0,
+      "stockLevel": 4,
+      "rating": 5,
+      "reviewCount": 91,
+      "img1": "https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=600&q=80&fit=crop",
+      "img2": "https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=600&q=80&fit=crop",
+      "badge": "SALE",
+      "colors": [
+        "#000000",
+        "#1a1a2e"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nova Atelier — How to Earn Real Money</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'DM Sans',sans-serif;background:#080808;color:#fafaf8;line-height:1.7;padding:40px 5%}
+.header{text-align:center;padding:60px 0 80px;border-bottom:1px solid rgba(201,168,76,.2)}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:42px;letter-spacing:6px;color:#c9a84c}
+h1{font-size:clamp(28px,5vw,48px);font-weight:300;margin:16px 0 12px;line-height:1.2}
+h1 em{font-style:italic;color:#c9a84c}
+.subtitle{font-size:16px;color:rgba(255,255,255,.4);max-width:560px;margin:0 auto}
+.steps{max-width:800px;margin:80px auto;display:flex;flex-direction:column;gap:48px}
+.step{display:grid;grid-template-columns:80px 1fr;gap:32px;align-items:start}
+.step-num{font-family:'Bebas Neue',sans-serif;font-size:64px;color:rgba(201,168,76,.2);line-height:1;text-align:center;padding-top:4px}
+.step-body{}
+.step-tag{display:inline-block;font-size:8px;font-weight:700;letter-spacing:3px;text-transform:uppercase;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.3);color:#c9a84c;padding:4px 12px;margin-bottom:12px}
+.step h2{font-size:22px;font-weight:700;margin-bottom:8px}
+.step p{font-size:14px;color:rgba(255,255,255,.5);margin-bottom:16px}
+.platform{display:flex;align-items:center;gap:16px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);padding:16px 20px;margin-bottom:12px;transition:border-color .3s}
+.platform:hover{border-color:rgba(201,168,76,.3)}
+.platform-icon{width:40px;height:40px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.platform-body{flex:1}
+.platform-name{font-size:14px;font-weight:700;margin-bottom:2px}
+.platform-desc{font-size:12px;color:rgba(255,255,255,.3)}
+.platform-link{font-size:10px;font-weight:700;letter-spacing:2px;color:#c9a84c;text-decoration:none;flex-shrink:0;padding:8px 16px;border:1px solid rgba(201,168,76,.3);transition:background .2s}
+.platform-link:hover{background:rgba(201,168,76,.1)}
+.free-tag{font-size:8px;font-weight:700;letter-spacing:1px;color:#22c55e;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.2);padding:2px 8px;margin-left:8px;vertical-align:middle}
+.code-block{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-left:3px solid #c9a84c;padding:16px 20px;font-family:monospace;font-size:13px;color:#c9a84c;margin:16px 0;overflow-x:auto}
+.highlight{color:#22c55e;font-weight:700}
+.warning{background:rgba(200,16,46,.08);border:1px solid rgba(200,16,46,.2);padding:16px 20px;font-size:13px;color:rgba(255,100,100,.7);margin:16px 0}
+.summary{max-width:800px;margin:0 auto 80px;background:rgba(201,168,76,.05);border:1px solid rgba(201,168,76,.2);padding:48px}
+.summary h2{font-size:24px;font-weight:700;margin-bottom:24px;color:#c9a84c}
+.summary-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.summary-card{background:rgba(0,0,0,.3);padding:20px;text-align:center;border:1px solid rgba(255,255,255,.06)}
+.summary-card .amt{font-family:'Bebas Neue',sans-serif;font-size:36px;color:#c9a84c;letter-spacing:2px}
+.summary-card .label{font-size:10px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.3);text-transform:uppercase;margin-top:4px}
+.divider{border:none;border-top:1px solid rgba(255,255,255,.07);margin:64px 0}
+@media(max-width:600px){
+  .step{grid-template-columns:50px 1fr;gap:16px}
+  .step-num{font-size:44px}
+  .summary-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+    <div class="logo">NOVA ATELIER</div>
+    <h1>How to Start Earning<br><em>Real Money</em></h1>
+    <p class="subtitle">Your store is built. Now connect it to real payment platforms and start receiving actual money from customers worldwide.</p>
+</div>
+
+<div class="steps">
+
+    <!-- STEP 1 -->
+    <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-body">
+            <span class="step-tag">Products</span>
+            <h2>Set up Gumroad — Sell Your Products</h2>
+            <p>Gumroad is free to join and lets you sell physical or digital products instantly. They handle payments, delivery emails, and taxes. You keep ~91% of every sale.</p>
+
+            <div class="platform">
+                <div class="platform-icon" style="background:#ff90e8">🛍</div>
+                <div class="platform-body">
+                    <div class="platform-name">Gumroad <span class="free-tag">FREE</span></div>
+                    <div class="platform-desc">Sign up → Create a product for each item → Copy the link → Paste in Nova.js config</div>
+                </div>
+                <a href="https://gumroad.com" target="_blank" class="platform-link">SIGN UP →</a>
+            </div>
+
+            <p>After creating each product on Gumroad, open <strong>Nova.js</strong> and paste the links in the config at the very top:</p>
+            <div class="code-block">
+const NOVA_CONFIG = {<br>
+&nbsp;&nbsp;products: {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1: '<span class="highlight">https://gumroad.com/l/abc123</span>',&nbsp;&nbsp;// Midnight Satin Slip Dress<br>
+&nbsp;&nbsp;&nbsp;&nbsp;2: '<span class="highlight">https://gumroad.com/l/def456</span>',&nbsp;&nbsp;// High Rise Sculpt Cargo<br>
+&nbsp;&nbsp;&nbsp;&nbsp;// ... one per product<br>
+&nbsp;&nbsp;},
+            </div>
+            <p>Once configured, clicking "Add to Bag" then "Checkout" with a single item will open the real Gumroad payment page in a new tab.</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- STEP 2 -->
+    <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-body">
+            <span class="step-tag">VIP Subscription & Gift Cards</span>
+            <h2>Set up Stripe — Recurring Revenue</h2>
+            <p>Stripe handles recurring subscriptions (your VIP membership at $2.99/month) and one-time payments (gift cards). Create a free account, then create Payment Links — no coding required.</p>
+
+            <div class="platform">
+                <div class="platform-icon" style="background:#635bff">💳</div>
+                <div class="platform-body">
+                    <div class="platform-name">Stripe <span class="free-tag">FREE TO START</span></div>
+                    <div class="platform-desc">dashboard.stripe.com → Payment Links → Create → Copy link → Paste in config</div>
+                </div>
+                <a href="https://stripe.com" target="_blank" class="platform-link">SIGN UP →</a>
+            </div>
+
+            <p><strong>For VIP membership:</strong> Create a recurring price of $2.99/month or $35.88/year. Then paste the link:</p>
+            <div class="code-block">
+&nbsp;&nbsp;vipMonthly: '<span class="highlight">https://buy.stripe.com/your_link_here</span>',<br>
+&nbsp;&nbsp;vipAnnual:  '<span class="highlight">https://buy.stripe.com/your_link_here</span>',
+            </div>
+
+            <p><strong>For Gift Cards:</strong> Create 5 one-time payment links ($25, $50, $100, $250, $500):</p>
+            <div class="code-block">
+&nbsp;&nbsp;giftCard: {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;25:  '<span class="highlight">https://buy.stripe.com/gift_25_link</span>',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;50:  '<span class="highlight">https://buy.stripe.com/gift_50_link</span>',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;// ...<br>
+&nbsp;&nbsp;},
+            </div>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- STEP 3 -->
+    <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-body">
+            <span class="step-tag">Email List</span>
+            <h2>Set up Mailchimp — Build Your Audience</h2>
+            <p>Every email you collect (newsletter, exit popup, spin wheel) is a potential future sale. Mailchimp is free up to 500 contacts and lets you send promotional emails to your list.</p>
+
+            <div class="platform">
+                <div class="platform-icon" style="background:#ffe01b">📧</div>
+                <div class="platform-body">
+                    <div class="platform-name">Mailchimp <span class="free-tag">FREE up to 500</span></div>
+                    <div class="platform-desc">mailchimp.com → Audience → Signup Forms → Embedded → copy action URL</div>
+                </div>
+                <a href="https://mailchimp.com" target="_blank" class="platform-link">SIGN UP →</a>
+            </div>
+
+            <p>After getting your form action URL, paste it in the config:</p>
+            <div class="code-block">
+&nbsp;&nbsp;mailchimpUrl: '<span class="highlight">https://yourname.us1.list-manage.com/subscribe/post?u=XXX&id=XXX</span>',
+            </div>
+            <p>Now every email entered in the newsletter, exit popup, and spin wheel goes straight to your Mailchimp list automatically.</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- STEP 4 -->
+    <div class="step">
+        <div class="step-num">04</div>
+        <div class="step-body">
+            <span class="step-tag">Host Your Store</span>
+            <h2>Put Your Store Online — Free Hosting</h2>
+            <p>Right now your files are on your phone. To take real orders, people need a URL to visit. Use one of these free options:</p>
+
+            <div class="platform">
+                <div class="platform-icon" style="background:#24292e">🐙</div>
+                <div class="platform-body">
+                    <div class="platform-name">GitHub Pages <span class="free-tag">FREE FOREVER</span></div>
+                    <div class="platform-desc">Upload your 5 files to a GitHub repo → Settings → Pages → your site is live at username.github.io</div>
+                </div>
+                <a href="https://pages.github.com" target="_blank" class="platform-link">START →</a>
+            </div>
+
+            <div class="platform">
+                <div class="platform-icon" style="background:#00c7b7">▲</div>
+                <div class="platform-body">
+                    <div class="platform-name">Netlify <span class="free-tag">FREE TIER</span></div>
+                    <div class="platform-desc">Drag & drop your folder onto netlify.com/drop → instant live URL in 30 seconds</div>
+                </div>
+                <a href="https://netlify.com/drop" target="_blank" class="platform-link">DEPLOY →</a>
+            </div>
+
+            <div class="warning">
+                ⚠️ After hosting, update <strong>storeUrl</strong> in Nova.js config with your real URL so referral links work correctly.
+            </div>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- STEP 5 -->
+    <div class="step">
+        <div class="step-num">05</div>
+        <div class="step-body">
+            <span class="step-tag">Get Customers</span>
+            <h2>Drive Traffic to Your Store</h2>
+            <p>A store with no visitors makes no money. The fastest free methods:</p>
+
+            <div class="platform">
+                <div class="platform-icon" style="background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)">📸</div>
+                <div class="platform-body">
+                    <div class="platform-name">Instagram & TikTok</div>
+                    <div class="platform-desc">Post product photos & videos. Link your store in bio. Tag #fashion #ootd #style. One viral post can make hundreds of sales.</div>
+                </div>
+            </div>
+
+            <div class="platform">
+                <div class="platform-icon" style="background:#E60023">📌</div>
+                <div class="platform-body">
+                    <div class="platform-name">Pinterest</div>
+                    <div class="platform-desc">Pin your product images linking to your store. Pinterest drives long-term organic traffic — pins last for years.</div>
+                </div>
+            </div>
+
+            <div class="platform">
+                <div class="platform-icon" style="background:#c9a84c">🔗</div>
+                <div class="platform-body">
+                    <div class="platform-name">Your Referral Program</div>
+                    <div class="platform-desc">Share your own referral link everywhere. Every customer becomes a sales channel — Give $10 Get $10 is already built into your store.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- EARNINGS POTENTIAL -->
+<div class="summary">
+    <h2>💰 Realistic Earnings Potential</h2>
+    <div class="summary-grid">
+        <div class="summary-card">
+            <div class="amt">$500</div>
+            <div class="label">Month 1 goal<br>10 orders avg $50</div>
+        </div>
+        <div class="summary-card">
+            <div class="amt">$2K</div>
+            <div class="label">Month 3 goal<br>40 orders + VIP subs</div>
+        </div>
+        <div class="summary-card">
+            <div class="amt">$10K</div>
+            <div class="label">Month 6 goal<br>Scale with social media</div>
+        </div>
+    </div>
+    <p style="margin-top:28px;font-size:13px;color:rgba(255,255,255,.3)">
+        VIP alone: 100 members × $2.99/mo = <strong style="color:#c9a84c">$299 recurring every month</strong> without lifting a finger.
+        Gift cards: often bought as gifts and partially redeemed — <strong style="color:#c9a84c">pure profit on unredeemed balance</strong>.
+    </p>
+</div>
+
+</body>
+</html>

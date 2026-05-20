@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>NOVA ATELIER | 2026 Black Label Collection</title>
+    <meta name="description" content="Explore the 2026 Black Label Collection at Nova Atelier. High-end fashion designed for the modern uniform.">
+    <meta name="theme-color" content="#080808">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="Nova.css">
+</head>
+<body>
+
+<!-- ░░ LOADER ░░ -->
+<div id="page-loader">
+    <div class="loader-inner">
+        <div class="loader-logo">NOVA<span>ATELIER</span></div>
+        <div class="loader-bar"><div class="loader-fill"></div></div>
+        <p class="loader-tag">BLACK LABEL 2026</p>
+    </div>
+    <div class="lc lc-tl"></div><div class="lc lc-tr"></div>
+    <div class="lc lc-bl"></div><div class="lc lc-br"></div>
+    <div class="loader-pct" id="loader-pct">0%</div>
+</div>
+
+<div id="toast-container"></div>
+
+<!-- ░░ FLASH SALE BAR ░░ -->
+<div id="flash-bar" class="flash-bar">
+    <div class="flash-inner">
+        <span class="flash-fire">🔥</span>
+        <span class="flash-text">FLASH SALE ENDS IN</span>
+        <div class="flash-clock">
+            <div class="flash-unit"><span id="fc-h">00</span><small>HRS</small></div>
+            <span class="flash-sep">:</span>
+            <div class="flash-unit"><span id="fc-m">00</span><small>MIN</small></div>
+            <span class="flash-sep">:</span>
+            <div class="flash-unit"><span id="fc-s">00</span><small>SEC</small></div>
+        </div>
+        <a href="#shop" class="flash-cta">SHOP NOW</a>
+        <button class="flash-close" id="flash-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+</div>
+
+<!-- ░░ VIP MEMBERSHIP MODAL ░░ -->
+<div id="vip-modal" class="vip-modal" role="dialog" aria-modal="true" aria-label="VIP Membership">
+    <div class="vip-inner">
+        <button class="vip-close" id="vip-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+        <div class="vip-badge-wrap"><span class="vip-badge"><i class="fa-solid fa-crown"></i> BLACK LABEL VIP</span></div>
+        <h2 class="vip-title">Unlock the<br><em>Inner Circle</em></h2>
+        <p class="vip-sub">Join thousands of style-first members getting exclusive perks, early access drops, and members-only pricing.</p>
+        <ul class="vip-perks">
+            <li><i class="fa-solid fa-check"></i> 10% off every order, always</li>
+            <li><i class="fa-solid fa-check"></i> Early access to new drops — 48h before public</li>
+            <li><i class="fa-solid fa-check"></i> Free priority shipping on all orders</li>
+            <li><i class="fa-solid fa-check"></i> Exclusive member-only styles</li>
+        </ul>
+        <div class="vip-price-row">
+            <div class="vip-price-block">
+                <span class="vip-price-label">Monthly</span>
+                <span class="vip-price-val">$4.99<small>/mo</small></span>
+            </div>
+            <div class="vip-price-divider"></div>
+            <div class="vip-price-block vip-featured">
+                <span class="vip-price-label">Annual <span class="vip-save-tag">SAVE 40%</span></span>
+                <span class="vip-price-val">$2.99<small>/mo</small></span>
+            </div>
+        </div>
+        <button class="vip-cta-btn" id="vip-join-btn"><i class="fa-solid fa-crown"></i><span>JOIN VIP — $2.99/mo</span></button>
+        <p class="vip-disclaimer">Cancel anytime · Billed annually · Secure checkout</p>
+    </div>
+</div>
+
+<!-- ░░ EXIT-INTENT POPUP ░░ -->
+<div id="exit-modal" class="exit-modal" role="dialog" aria-modal="true">
+    <div class="exit-inner">
+        <button class="exit-close" id="exit-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+        <div class="exit-img-col">
+            <img src="https://images.unsplash.com/photo-1572804013427-4d7ca7268217?w=500&q=80&fit=crop" alt="Nova Atelier">
+            <div class="exit-img-overlay"></div>
+        </div>
+        <div class="exit-copy">
+            <p class="exit-eyebrow">WAIT — DON'T GO</p>
+            <h3 class="exit-title">15% Off<br><em>Your First Order</em></h3>
+            <p class="exit-sub">Enter your email and we'll send your exclusive one-time discount code instantly.</p>
+            <form class="exit-form" id="exit-form">
+                <input type="email" placeholder="Your email address" required class="exit-input">
+                <button type="submit" class="exit-submit">GET MY 15% OFF</button>
+            </form>
+            <p class="exit-code-reveal hidden" id="exit-code-reveal">
+                Your code: <strong id="exit-code-val">NOVA15</strong> — copied to clipboard!
+            </p>
+            <p class="exit-no-thanks" id="exit-no-thanks">No thanks, I'll pay full price</p>
+        </div>
+    </div>
+</div>
+
+<!-- ░░ GIFT CARD PROMO (after newsletter section) will be injected by JS ░░ -->
+
+<div id="cursor-outer"></div>
+<div id="cursor-inner"></div>
+<div id="cursor-text"></div>
+<div id="scroll-bar"></div>
+
+<!-- ░░ SEARCH ░░ -->
+<div id="search-overlay" class="search-overlay">
+    <button class="search-close" id="search-close"><i class="fa-solid fa-xmark"></i></button>
+    <div class="search-inner">
+        <div class="search-input-wrap">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="search-input" placeholder="Search styles, brands…" autocomplete="off">
+            <kbd>ESC</kbd>
+        </div>
+        <div class="search-hint">Try: Dresses · Nova Street · Cargo · Silk · Sets</div>
+        <div id="search-results" class="search-results"></div>
+    </div>
+</div>
+
+<!-- ░░ SIZE MODAL ░░ -->
+<div id="size-modal" class="size-modal">
+    <div class="size-modal-inner">
+        <div class="size-modal-head">
+            <div>
+                <p class="size-modal-brand" id="modal-brand"></p>
+                <h3 class="size-modal-name" id="modal-name"></h3>
+            </div>
+            <button class="size-modal-close" id="size-modal-close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <!-- Size guide tab -->
+        <div class="size-tabs">
+            <button class="size-tab active" data-tab="sizes">Select Size</button>
+            <button class="size-tab" data-tab="guide">Size Guide</button>
+        </div>
+        <div class="size-tab-body" id="tab-sizes">
+            <div class="size-grid" id="size-grid"></div>
+            <button class="size-confirm-btn" id="size-confirm" disabled><span>SELECT A SIZE</span></button>
+        </div>
+        <div class="size-tab-body hidden" id="tab-guide">
+            <table class="size-guide-table">
+                <thead><tr><th>Size</th><th>Bust</th><th>Waist</th><th>Hips</th></tr></thead>
+                <tbody>
+                    <tr><td>XS</td><td>31–32"</td><td>24–25"</td><td>34–35"</td></tr>
+                    <tr><td>S</td><td>33–34"</td><td>26–27"</td><td>36–37"</td></tr>
+                    <tr><td>M</td><td>35–36"</td><td>28–29"</td><td>38–39"</td></tr>
+                    <tr><td>L</td><td>37–39"</td><td>30–32"</td><td>40–42"</td></tr>
+                    <tr><td>XL</td><td>40–42"</td><td>33–35"</td><td>43–45"</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- ░░ QUICKVIEW MODAL ░░ -->
+<div id="quickview-modal" class="quickview-modal">
+    <div class="qv-inner">
+        <button class="qv-close" id="qv-close"><i class="fa-solid fa-xmark"></i></button>
+        <div class="qv-gallery" id="qv-gallery"></div>
+        <div class="qv-info" id="qv-info"></div>
+    </div>
+</div>
+
+<!-- ░░ CART DRAWER ░░ -->
+<div class="cart-overlay" id="cart-overlay"></div>
+<div id="cart-drawer" class="cart-drawer">
+    <div class="cart-drawer-head">
+        <h3>YOUR BAG (<span id="cart-count-drawer">0</span>)</h3>
+        <button id="cart-close" class="cart-close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="cart-body" id="cart-items-container"></div>
+    <div class="cart-upsell" id="cart-upsell" style="display:none">
+        <p class="cart-upsell-title"><i class="fa-solid fa-sparkles"></i> Complete the Look</p>
+        <div class="cart-upsell-track" id="cart-upsell-track"></div>
+    </div>
+    <div class="cart-footer">
+        <div class="cart-progress-wrap">
+            <p class="cart-progress-msg" id="cart-progress-msg">Add <strong id="cart-progress-amt">$75</strong> more for free shipping</p>
+            <div class="cart-progress-track"><div class="cart-progress-fill" id="cart-progress-fill"></div></div>
+        </div>
+        <div class="total-row"><span>Subtotal</span><span id="cart-total-val">$0.00</span></div>
+        <p class="cart-tax-note">Tax & shipping calculated at checkout</p>
+        <button class="checkout-btn" onclick="novaApp.goToCheckout()"><span>PROCEED TO CHECKOUT</span><i class="fa-solid fa-arrow-right"></i></button>
+        <a href="#shop" class="continue-shopping" id="continue-shopping">Continue Shopping</a>
+    </div>
+</div>
+
+<!-- ░░ FLOATING CART ░░ -->
+<button id="cart-bag" class="floating-cart" aria-label="Open bag">
+    <i class="fa-solid fa-bag-shopping"></i>
+    <span class="cart-count">0</span>
+</button>
+
+<!-- ░░ MOBILE NAV ░░ -->
+<div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+<nav class="mobile-nav" id="mobile-nav">
+    <div class="mobile-nav-head">
+        <span class="logo">NOVA<span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300">Atelier</span></span>
+        <button class="mobile-nav-close" id="mobile-nav-close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <ul class="mobile-nav-links">
+        <li><a href="#shop" data-cat="all"><span>All Items</span><i class="fa-solid fa-arrow-right"></i></a></li>
+        <li><a href="#shop" data-cat="Dresses"><span>Dresses</span><i class="fa-solid fa-arrow-right"></i></a></li>
+        <li><a href="#shop" data-cat="Tops"><span>Tops</span><i class="fa-solid fa-arrow-right"></i></a></li>
+        <li><a href="#shop" data-cat="Bottoms"><span>Bottoms</span><i class="fa-solid fa-arrow-right"></i></a></li>
+        <li><a href="#shop" data-cat="Outerwear"><span>Outerwear</span><i class="fa-solid fa-arrow-right"></i></a></li>
+        <li><a href="#shop" data-cat="Sets"><span>Sets</span><i class="fa-solid fa-arrow-right"></i></a></li>
+        <li><a href="#shop" data-cat="Accessories"><span>Accessories</span><i class="fa-solid fa-arrow-right"></i></a></li>
+        <li><a href="#shop" data-cat="Swim"><span>Swim</span><i class="fa-solid fa-arrow-right"></i></a></li>
+    </ul>
+    <div class="mobile-nav-footer">
+        <p>Free shipping over $75 · Code <strong>NOVA20</strong></p>
+        <div class="mobile-social">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+        </div>
+    </div>
+</nav>
+
+<!-- ░░ HEADER ░░ -->
+<header id="main-header">
+    <div class="promo-tape">
+        <div class="ticker">
+            NEW DROP: BLACK LABEL 2026 &nbsp;&bull;&nbsp; FREE SHIPPING OVER $75 &nbsp;&bull;&nbsp; USE CODE NOVA20 FOR 20% OFF &nbsp;&bull;&nbsp; NEW DROP: BLACK LABEL 2026 &nbsp;&bull;&nbsp; FREE SHIPPING OVER $75 &nbsp;&bull;&nbsp; USE CODE NOVA20 FOR 20% OFF &nbsp;&bull;&nbsp;
+        </div>
+    </div>
+    <div class="nav-main">
+        <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+            <span></span><span></span><span></span>
+        </button>
+        <a href="#" class="logo">NOVA<span>Atelier</span></a>
+        <div class="nav-tools">
+            <button class="search-trigger" id="search-trigger" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button class="vip-trigger" id="vip-trigger" aria-label="VIP Membership">
+                <i class="fa-solid fa-crown"></i>
+            </button>
+            <button class="wishlist-trigger" id="wishlist-trigger" aria-label="Wishlist">
+                <i class="fa-regular fa-heart"></i>
+                <span class="wish-count" id="wish-count">0</span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+
+<!-- ═══ HERO ═══ -->
+<section class="stage" id="hero">
+    <div class="stage-video-wrap" id="hero-slides">
+
+        <!-- Slide 1 -->
+        <div class="hero-slide active">
+            <img src="https://images.unsplash.com/photo-1566479179817-c12e4cc7f3b5?w=1600&q=90&fit=crop" alt="Look 1" loading="eager" onerror="this.parentElement.style.background='#0d0d0d'">
+        </div>
+        <!-- Slide 2 -->
+        <div class="hero-slide">
+            <img src="https://images.unsplash.com/photo-1572804013427-4d7ca7268217?w=1600&q=90&fit=crop" alt="Look 2" loading="lazy" onerror="this.parentElement.style.background='#0d0d0d'">
+        </div>
+        <!-- Slide 3 -->
+        <div class="hero-slide">
+            <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=1600&q=90&fit=crop" alt="Look 3" loading="lazy" onerror="this.parentElement.style.background='#0d0d0d'">
+        </div>
+        <!-- Slide 4 -->
+        <div class="hero-slide">
+            <img src="https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=1600&q=90&fit=crop" alt="Look 4" loading="lazy" onerror="this.parentElement.style.background='#0d0d0d'">
+        </div>
+
+        <div class="stage-vig stage-vig--btm"></div>
+        <div class="stage-vig stage-vig--top"></div>
+        <div class="stage-vig stage-vig--left"></div>
+        <div class="stage-grain"></div>
+
+        <!-- Slide progress dots -->
+        <div class="hero-dots" id="hero-dots">
+            <span class="hero-dot active"></span>
+            <span class="hero-dot"></span>
+            <span class="hero-dot"></span>
+            <span class="hero-dot"></span>
+        </div>
+        <!-- Slide progress line -->
+        <div class="hero-progress-bar"><div class="hero-progress-fill" id="hero-progress"></div></div>
+    </div>
+    <!-- Animated background text -->
+    <div class="hero-bg-text" aria-hidden="true">NOVA</div>
+    <div class="hero-tag"><span class="hero-tag-dot"></span><span>SS 2026</span></div>
+    <div class="stage-overlay">
+        <p class="hero-eyebrow">Black Label Collection 2026</p>
+        <h1 class="hero-title">
+            <span class="hero-line"><span class="hero-line-inner">The</span></span>
+            <span class="hero-line"><span class="hero-line-inner"><em>New</em></span></span>
+            <span class="hero-line"><span class="hero-line-inner">Uniform</span></span>
+        </h1>
+        <p class="hero-sub">Precision-engineered for those who<br>wear their silence loudly.</p>
+        <div class="hero-actions">
+            <a href="#shop" class="btn-primary magnetic"><span>Shop the Drop</span><i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#campaign" class="btn-ghost"><span>View Campaign</span></a>
+        </div>
+    </div>
+    <div class="hero-scroll-hint">
+        <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+        <span>SCROLL</span>
+    </div>
+    <div class="hero-counter">01 / 06</div>
+    <!-- Live dot indicator -->
+    <div class="hero-live"><span class="live-dot"></span>Live Drop</div>
+</section>
+
+<!-- ═══ TRUST BAR ═══ -->
+<div class="trust-bar">
+    <div class="trust-container">
+        <span class="trust-label">As Seen In</span>
+        <div class="trust-logos">
+            <span class="trust-logo">VOGUE</span>
+            <span class="trust-logo">ELLE</span>
+            <span class="trust-logo">BAZAAR</span>
+            <span class="trust-logo">NYLON</span>
+            <span class="trust-logo">GRAZIA</span>
+        </div>
+    </div>
+</div>
+
+<!-- ═══ CAMPAIGN BENTO ═══ -->
+<section class="campaign-section" id="campaign">
+    <div class="campaign-header">
+        <p class="section-eyebrow">Campaign</p>
+        <h2 class="section-title">Black <em>Label</em></h2>
+        <p class="section-sub">Shot on location. Worn by those who define the era.</p>
+    </div>
+    <div class="bento-grid">
+        <div class="bento-cell bento-cell--large">
+            <div class="bento-media">
+                <img src="https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?w=1200&q=90&fit=crop" alt="New Collection" class="bento-img" loading="eager" onerror="this.style.opacity='0'">
+                <div class="bento-overlay"></div><div class="bento-curtain"></div>
+                <div class="bento-tag">SS 2026</div>
+            </div>
+            <div class="bento-info">
+                <span class="bento-num">01</span>
+                <div class="bento-copy"><p class="bento-label">NEW COLLECTION</p><h3 class="bento-title">The Drop</h3></div>
+                <a href="#shop" class="bento-cta">SHOP NOW <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="bento-cell bento-cell--sm">
+            <div class="bento-media">
+                <img src="https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=800&q=90&fit=crop" alt="Black Label" class="bento-img" loading="lazy" onerror="this.style.opacity='0'">
+                <div class="bento-overlay"></div><div class="bento-curtain"></div>
+                <div class="bento-tag">Exclusive</div>
+            </div>
+            <div class="bento-info bento-info--sm"><span class="bento-num">02</span><p class="bento-label">BLACK LABEL</p></div>
+        </div>
+        <div class="bento-cell bento-cell--sm">
+            <div class="bento-media">
+                <img src="https://images.unsplash.com/photo-1542574621-e088a4464792?w=800&q=90&fit=crop" alt="SS 2026" class="bento-img" loading="lazy" onerror="this.style.opacity='0'">
+                <div class="bento-overlay"></div><div class="bento-curtain"></div>
+                <div class="bento-tag">New</div>
+            </div>
+            <div class="bento-info bento-info--sm"><span class="bento-num">03</span><p class="bento-label">SS 2026</p></div>
+        </div>
+        <div class="bento-cell bento-cell--sm">
+            <div class="bento-media">
+                <img src="https://images.unsplash.com/photo-1519657337289-077653f724ed?w=800&q=90&fit=crop" alt="Atelier" class="bento-img" loading="lazy" onerror="this.style.opacity='0'">
+                <div class="bento-overlay"></div><div class="bento-curtain"></div>
+                <div class="bento-tag">Limited</div>
+            </div>
+            <div class="bento-info bento-info--sm"><span class="bento-num">04</span><p class="bento-label">ATELIER</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ STATS ═══ -->
+<div class="stats-strip">
+    <div class="stat-item"><span class="stat-num" data-target="16">0</span><span class="stat-label">Collections</span></div>
+    <div class="stat-divider"></div>
+    <div class="stat-item"><span class="stat-num" data-target="12400">0</span><span class="stat-label">Orders Shipped</span></div>
+    <div class="stat-divider"></div>
+    <div class="stat-item"><span class="stat-num" data-target="98">0</span><span class="stat-label">% 5-Star Reviews</span></div>
+    <div class="stat-divider"></div>
+    <div class="stat-item"><span class="stat-num" data-target="48">0</span><span class="stat-label">Countries</span></div>
+</div>
+
+<!-- ═══ HORIZONTAL SCROLL LOOKBOOK ═══ -->
+<section class="hscroll-section" id="lookbook-scroll">
+    <div class="hscroll-header">
+        <div>
+            <p class="section-eyebrow">Lookbook</p>
+            <h2 class="section-title">This <em>Season</em></h2>
+        </div>
+        <div class="hscroll-nav">
+            <button class="hscroll-btn" id="hs-prev"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="hscroll-btn" id="hs-next"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+    <div class="hscroll-track" id="hscroll-track">
+        <div class="hscroll-item">
+            <div class="hscroll-img-wrap">
+                <img src="https://images.unsplash.com/photo-1566479179817-c12e4cc7f3b5?w=700&q=90&fit=crop" alt="Look 01" loading="lazy" onerror="this.style.opacity='0'">
+                <div class="hscroll-num">01</div>
+                <div class="hscroll-hover-label">Shop Look</div>
+            </div>
+            <p class="hscroll-caption">Midnight Editorial</p>
+            <span class="hscroll-price">From $29.98</span>
+        </div>
+        <div class="hscroll-item">
+            <div class="hscroll-img-wrap">
+                <img src="https://images.unsplash.com/photo-1572804013427-4d7ca7268217?w=700&q=90&fit=crop" alt="Look 02" loading="lazy" onerror="this.style.opacity='0'">
+                <div class="hscroll-num">02</div>
+                <div class="hscroll-hover-label">Shop Look</div>
+            </div>
+            <p class="hscroll-caption">The Black Label</p>
+            <span class="hscroll-price">From $45.00</span>
+        </div>
+        <div class="hscroll-item">
+            <div class="hscroll-img-wrap">
+                <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=700&q=90&fit=crop" alt="Look 03" loading="lazy" onerror="this.style.opacity='0'">
+                <div class="hscroll-num">03</div>
+                <div class="hscroll-hover-label">Shop Look</div>
+            </div>
+            <p class="hscroll-caption">Sequin Night</p>
+            <span class="hscroll-price">From $15.00</span>
+        </div>
+        <div class="hscroll-item">
+            <div class="hscroll-img-wrap">
+                <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=700&q=90&fit=crop" alt="Look 04" loading="lazy" onerror="this.style.opacity='0'">
+                <div class="hscroll-num">04</div>
+                <div class="hscroll-hover-label">Shop Look</div>
+            </div>
+            <p class="hscroll-caption">After Hours</p>
+            <span class="hscroll-price">From $38.00</span>
+        </div>
+        <div class="hscroll-item">
+            <div class="hscroll-img-wrap">
+                <img src="https://images.unsplash.com/photo-1551537482-f2075a1d41f2?w=700&q=90&fit=crop" alt="Look 05" loading="lazy" onerror="this.style.opacity='0'">
+                <div class="hscroll-num">05</div>
+                <div class="hscroll-hover-label">Shop Look</div>
+            </div>
+            <p class="hscroll-caption">Archival Denim</p>
+            <span class="hscroll-price">From $58.00</span>
+        </div>
+        <div class="hscroll-item">
+            <div class="hscroll-img-wrap">
+                <img src="https://images.unsplash.com/photo-1519657337289-077653f724ed?w=700&q=90&fit=crop" alt="Look 06" loading="lazy" onerror="this.style.opacity='0'">
+                <div class="hscroll-num">06</div>
+                <div class="hscroll-hover-label">Shop Look</div>
+            </div>
+            <p class="hscroll-caption">Evening Ritual</p>
+            <span class="hscroll-price">From $65.00</span>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ SHOP ═══ -->
+<section id="shop">
+    <div class="shop-header">
+        <h2 class="shop-title">The Collection</h2>
+        <div class="shop-header-right">
+            <span class="product-count" id="product-count">— items</span>
+            <div class="sort-wrap">
+                <select class="sort-select" id="sort-select">
+                    <option value="default">Featured</option>
+                    <option value="price-asc">Price: Low to High</option>
+                    <option value="price-desc">Price: High to Low</option>
+                    <option value="rating">Top Rated</option>
+                    <option value="newest">Newest</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="filter-bar" id="category-filters">
+        <button class="pill active" data-category="all"><span>All</span></button>
+        <button class="pill" data-category="Dresses"><span>Dresses</span></button>
+        <button class="pill" data-category="Tops"><span>Tops</span></button>
+        <button class="pill" data-category="Bottoms"><span>Bottoms</span></button>
+        <button class="pill" data-category="Outerwear"><span>Outerwear</span></button>
+        <button class="pill" data-category="Sets"><span>Sets</span></button>
+        <button class="pill" data-category="Accessories"><span>Accessories</span></button>
+        <button class="pill" data-category="Swim"><span>Swim</span></button>
+    </div>
+</section>
+<section class="product-matrix" id="product-grid"></section>
+
+<!-- ═══ RECENTLY VIEWED ═══ -->
+<section class="rv-section" id="rv-section" style="display:none">
+    <div class="rv-header">
+        <p class="section-eyebrow">Your History</p>
+        <h2 class="section-title">Recently <em>Viewed</em></h2>
+    </div>
+    <div class="rv-track" id="rv-track"></div>
+</section>
+
+<!-- ═══ LOOKBOOK VIDEO STRIP ═══ -->
+<div class="lookbook-strip">
+    <div class="lookbook-video-wrap">
+        <img class="lookbook-video" src="https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=1400&q=80&fit=crop" alt="Lookbook" id="lookbook-img-fallback">
+        <video class="lookbook-video" autoplay muted loop playsinline id="lookbook-video"
+            oncanplay="this.style.opacity=1;document.getElementById('lookbook-img-fallback').style.display='none'">
+            <source src="Fashion-5.mp4" type="video/mp4">
+        </video>
+        <div class="lookbook-overlay"></div>
+    </div>
+    <div class="lookbook-copy">
+        <p class="lookbook-eyebrow">Nova Manifesto</p>
+        <h2 class="lookbook-title">Dress Like<br>You <em>Mean It</em></h2>
+        <p class="lookbook-sub">Every stitch to move with you.<br>Every cut to outlast the season.</p>
+        <a href="#shop" class="btn-primary magnetic"><span>Shop Now</span><i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    <div class="lookbook-marquee" aria-hidden="true">
+        <div class="lk-ticker">BLACK LABEL 2026 &nbsp;·&nbsp; NOVA ATELIER &nbsp;·&nbsp; THE NEW UNIFORM &nbsp;·&nbsp; BLACK LABEL 2026 &nbsp;·&nbsp; NOVA ATELIER &nbsp;·&nbsp; THE NEW UNIFORM &nbsp;·&nbsp;</div>
+    </div>
+</div>
+
+<!-- ═══ CHARTS ═══ -->
+<section id="promo-chart-section" class="promo-chart-section"></section>
+
+<!-- ═══ FEATURES ═══ -->
+<div class="features-strip">
+    <div class="feat"><i class="fa-solid fa-truck-fast"></i><div><strong>Fast Shipping</strong><span>Orders ship in 24h</span></div></div>
+    <div class="feat"><i class="fa-solid fa-rotate-left"></i><div><strong>Free Returns</strong><span>30-day no-hassle</span></div></div>
+    <div class="feat"><i class="fa-solid fa-shield-halved"></i><div><strong>Secure Checkout</strong><span>256-bit SSL</span></div></div>
+    <div class="feat"><i class="fa-solid fa-gem"></i><div><strong>Premium Quality</strong><span>Curated luxury fabrics</span></div></div>
+</div>
+
+<!-- ═══ NEWSLETTER ═══ -->
+<section class="newsletter-section">
+    <div class="newsletter-bg"></div>
+    <div class="newsletter-content">
+        <p class="nl-eyebrow">Join the Atelier</p>
+        <h2>First Access.<br>Always.</h2>
+        <p class="nl-sub">Exclusive drops, early access and editorial content — delivered first.</p>
+        <form class="input-group" id="nl-form" onsubmit="novaApp.handleNewsletter(event)">
+            <input type="email" placeholder="Your email address" required>
+            <button type="submit" class="pill active"><span>Subscribe</span></button>
+        </form>
+        <p class="nl-disclaimer">No spam. Unsubscribe anytime.</p>
+        <button class="nl-spin-trigger" id="nl-spin-trigger">
+            🎰 Or spin to win a bigger discount
+        </button>
+    </div>
+</section>
+
+<!-- ═══ GIFT CARDS ═══ -->
+<section class="giftcard-section" id="gift-cards">
+    <div class="giftcard-inner">
+        <div class="giftcard-copy">
+            <p class="section-eyebrow" style="color:var(--gold)">PERFECT FOR ANY OCCASION</p>
+            <h2 class="giftcard-title">Nova <em>Gift Cards</em></h2>
+            <p class="giftcard-sub">The gift of impeccable taste. Delivered instantly to any inbox — in amounts from $25 to $500.</p>
+            <div class="giftcard-amounts">
+                <button class="gc-amount active" data-amount="25">$25</button>
+                <button class="gc-amount" data-amount="50">$50</button>
+                <button class="gc-amount" data-amount="100">$100</button>
+                <button class="gc-amount" data-amount="250">$250</button>
+                <button class="gc-amount" data-amount="500">$500</button>
+            </div>
+            <button class="giftcard-buy-btn" id="gc-buy-btn">
+                <i class="fa-solid fa-gift"></i>
+                <span>Buy Gift Card — $25</span>
+            </button>
+        </div>
+        <div class="giftcard-visual">
+            <div class="gc-card-mockup">
+                <div class="gc-card-logo">NOVA<span>Atelier</span></div>
+                <div class="gc-card-amount" id="gc-card-display">$25</div>
+                <p class="gc-card-label">GIFT CARD</p>
+                <div class="gc-card-strip"></div>
+                <div class="gc-card-dots"><span></span><span></span><span></span></div>
+            </div>
+            <div class="gc-card-mockup gc-card-back">
+                <div class="gc-card-logo">NOVA<span>Atelier</span></div>
+                <div class="gc-card-amount">$50</div>
+                <p class="gc-card-label">GIFT CARD</p>
+                <div class="gc-card-strip"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ AFFILIATE BANNER ═══ -->
+<section class="affiliate-section">
+    <div class="aff-inner">
+        <div class="aff-icon"><i class="fa-solid fa-link"></i></div>
+        <div class="aff-copy">
+            <p class="aff-eyebrow">NOVA AFFILIATE PROGRAM</p>
+            <h3 class="aff-title">Earn 15% on Every Referral</h3>
+            <p class="aff-sub">Share your unique link. Earn commission on every sale you drive. Join 800+ creators already earning with Nova Atelier.</p>
+        </div>
+        <button class="aff-cta" id="aff-cta-btn">
+            <span>Apply to Affiliate</span>
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+    </div>
+</section>
+
+<!-- ░░ SOCIAL PROOF TICKER ░░ -->
+<div id="proof-ticker" class="proof-ticker">
+    <div class="proof-inner">
+        <span class="proof-dot"></span>
+        <span class="proof-msg" id="proof-msg">Someone in Dubai just bought <strong>Midnight Satin Slip Dress</strong></span>
+        <button class="proof-close" id="proof-close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+</div>
+
+<!-- ░░ SPIN TO WIN WHEEL ░░ -->
+<div id="spin-modal" class="spin-modal" role="dialog" aria-modal="true">
+    <div class="spin-inner">
+        <button class="spin-close-btn" id="spin-close"><i class="fa-solid fa-xmark"></i></button>
+        <div class="spin-left">
+            <p class="spin-eyebrow">🎰 LUCKY SPIN</p>
+            <h3 class="spin-title">Spin to<br><em>Win a Prize</em></h3>
+            <p class="spin-sub">One spin. Real rewards. Enter your email to unlock.</p>
+            <form class="spin-form" id="spin-form">
+                <input type="email" placeholder="Your email address" required class="spin-input">
+                <button type="submit" class="spin-submit">SPIN THE WHEEL</button>
+            </form>
+            <p class="spin-terms">One spin per customer · Prizes applied at checkout</p>
+        </div>
+        <div class="spin-right">
+            <div class="spin-wheel-wrap">
+                <canvas id="spin-canvas" width="300" height="300"></canvas>
+                <div class="spin-pointer"><i class="fa-solid fa-caret-down"></i></div>
+            </div>
+        </div>
+        <div class="spin-result hidden" id="spin-result">
+            <i class="fa-solid fa-party-horn spin-result-icon"></i>
+            <h3 class="spin-result-title">You Won!</h3>
+            <div class="spin-result-prize" id="spin-result-prize">20% OFF</div>
+            <p class="spin-result-code">Use code: <strong id="spin-code">NOVA20</strong></p>
+            <button class="spin-result-btn" id="spin-result-btn">SHOP NOW & SAVE</button>
+        </div>
+    </div>
+</div>
+
+<!-- ░░ STICKY ADD TO CART BAR ░░ -->
+<div id="sticky-bar" class="sticky-bar hidden">
+    <div class="sticky-bar-inner">
+        <div class="sticky-product-info">
+            <img id="sticky-img" src="" alt="" class="sticky-img">
+            <div>
+                <p class="sticky-name" id="sticky-name">—</p>
+                <p class="sticky-price" id="sticky-price">—</p>
+            </div>
+        </div>
+        <div class="sticky-actions">
+            <select class="sticky-size" id="sticky-size"></select>
+            <button class="sticky-add-btn" id="sticky-add-btn">
+                <i class="fa-solid fa-bag-shopping"></i> ADD TO BAG
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- ░░ BUNDLE DEAL MODAL ░░ -->
+<div id="bundle-modal" class="bundle-modal" role="dialog" aria-modal="true">
+    <div class="bundle-inner">
+        <button class="bundle-close" id="bundle-close"><i class="fa-solid fa-xmark"></i></button>
+        <div class="bundle-header">
+            <span class="bundle-tag"><i class="fa-solid fa-bolt"></i> BUNDLE & SAVE</span>
+            <h3 class="bundle-title">Complete the<br><em>Look & Save 25%</em></h3>
+            <p class="bundle-sub">Add any 2 items and save 25% on your total order automatically.</p>
+        </div>
+        <div class="bundle-products" id="bundle-products"></div>
+        <div class="bundle-footer">
+            <div class="bundle-savings">
+                <span class="bundle-save-label">YOU SAVE</span>
+                <span class="bundle-save-amt" id="bundle-save-amt">$0.00</span>
+            </div>
+            <button class="bundle-add-btn" id="bundle-add-btn">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span>Add Bundle to Bag</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- ═══ REFERRAL SECTION ═══ -->
+<section class="referral-section">
+    <div class="referral-inner">
+        <div class="referral-copy">
+            <p class="section-eyebrow" style="color:var(--gold)">REFER A FRIEND</p>
+            <h2 class="referral-title">Give <em>$10</em>,<br>Get <em>$10</em></h2>
+            <p class="referral-sub">Share Nova Atelier with a friend. When they place their first order, you both get $10 store credit — automatically.</p>
+            <div class="referral-steps">
+                <div class="ref-step"><span class="ref-num">01</span><p>Copy your unique link below</p></div>
+                <div class="ref-step"><span class="ref-num">02</span><p>Share it with friends & on social</p></div>
+                <div class="ref-step"><span class="ref-num">03</span><p>Both earn $10 when they order</p></div>
+            </div>
+            <div class="referral-link-box">
+                <span class="ref-link-val" id="ref-link-val">nova-atelier.com/ref/STYLE2026</span>
+                <button class="ref-copy-btn" id="ref-copy-btn"><i class="fa-solid fa-copy"></i> Copy</button>
+            </div>
+        </div>
+        <div class="referral-visual">
+            <div class="ref-card ref-card--you">
+                <div class="ref-card-label">YOU GET</div>
+                <div class="ref-card-amount">$10</div>
+                <div class="ref-card-sub">Store credit</div>
+            </div>
+            <div class="ref-plus"><i class="fa-solid fa-plus"></i></div>
+            <div class="ref-card ref-card--friend">
+                <div class="ref-card-label">FRIEND GETS</div>
+                <div class="ref-card-amount">$10</div>
+                <div class="ref-card-sub">Off first order</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <span class="logo">NOVA<span>Atelier</span></span>
+            <div class="footer-accent-line"></div>
+            <p>Crafted for those who move with intention.<br>Worn by those who never follow.</p>
+            <div class="social-links" style="margin-top:24px">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+                <a href="#" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <h4>Collection</h4>
+            <ul>
+                <li><a href="#shop">New Arrivals</a></li>
+                <li><a href="#shop">Dresses</a></li>
+                <li><a href="#shop">Outerwear</a></li>
+                <li><a href="#shop">Sets</a></li>
+                <li><a href="#shop">Swim</a></li>
+            </ul>
+        </div>
+        <div class="footer-links">
+            <h4>Support</h4>
+            <ul>
+                <li><a href="#">Shipping Policy</a></li>
+                <li><a href="#">Returns</a></li>
+                <li><a href="#">Size Guide</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Track Order</a></li>
+            </ul>
+        </div>
+        <div class="footer-links">
+            <h4>About</h4>
+            <ul>
+                <li><a href="#">Our Story</a></li>
+                <li><a href="#">Sustainability</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Press</a></li>
+                <li><a href="#">Affiliates</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Nova Atelier. All rights reserved.</p>
+        <p style="margin-top:6px;font-size:10px;opacity:.5">Designed with intention. Built with precision.</p>
+    </div>
+</footer>
+
+</main>
+<script src="Nova.js"></script>
+</body>
+</html>
